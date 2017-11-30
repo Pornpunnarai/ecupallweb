@@ -26,8 +26,13 @@ a:hover {
 
 html,
 body {
+  background-color: darkslategray;
   height: 100%;
   background-color: #333;
+}
+html{
+
+  background-color: darkslategray;
 }
 body {
   color: #fff;
@@ -166,7 +171,7 @@ a.btn.btn-secondary{
 }
 
 nav.navbar.navbar-expand-md.navbar-dark.fixed-top{
-  margin-top: 10px;
+  padding-top: 20px;
   background-color: darkslategray;
 }
 
@@ -176,11 +181,29 @@ a.navbar-brand{
 
 div.panel.panel-info{
   background: gray;
-  padding: 15px;
+  padding: 25px;
   border-radius: 25px;
   /*opacity: 0.4;*/
 }
-
+div.container.panel.panel-info{
+  margin-top: 70px;
+  padding: 20px;
+}
 h3.panel-title{
   margin-bottom: 15px;
+}
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: darkslategray;
+}
+
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: darkslategray;
 }

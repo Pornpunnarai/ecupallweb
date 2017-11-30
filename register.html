@@ -56,22 +56,22 @@
 
 
             <div class="container panel panel-info">
-            <main role="main" class="inner cover">
+            <main role="main" class="container-fluid">
                 <div class="panel panel-info">
                     <h2>Please Sign Up</h2><br>
                     <form class="form-horizontal" method="post" action="check_login.php">
 
                         <div class="row col-md-12" style="justify-content: center">
                             <div class="col-md-12">
-                                <img id="blah" src="#" alt="your image" />
+                                <img id="blah" src="pic/avatar.png" style="width: 150px" alt="your image" />
                             </div>
-
+                            <div class="row"></div>
                             <div class="col-md-12">
-                                <input type="file" name="pic" onchange="readURL(this)">
+                                <input type="file" class="btn btn-info btn-sm" name="pic" onchange="readURL(this)">
                             </div>
                         </div>
 
-
+                        <br>
 
                         <div class="row col-md-12">
                             <div class="col-md-2">
@@ -133,12 +133,18 @@
             </main>
         </div>
             </div>
-            <footer class="mastfoot">
-                <div class="inner">
-                    <p>Created by <b style="color: white">ecup developer</b>.</p>
+
+
+            <!--<footer class="mastfoot">-->
+                <!--<div class="inner">-->
+                    <!--<p>Created by <b style="color: white">ecup developer</b>.</p>-->
+                <!--</div>-->
+            <!--</footer>-->
+            <footer class="footer">
+                <div class="container">
+                    <span class="text-muted"><p>Created by <b style="color: white">ecup developer</b>.</p></span>
                 </div>
             </footer>
-
         </div>
 
     </div>
