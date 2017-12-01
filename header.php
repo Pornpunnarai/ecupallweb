@@ -16,8 +16,6 @@
 </head>
 
 <body>
-<div class="site-wrapper">
-    <div class="site-wrapper-inner">
         <nav class="row col-md-12 navbar navbar-expand-md navbar-dark fixed-top">
             <a class="navbar-brand" href="#">ECUP</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,67 +29,32 @@
                 <div class="my-0 my-lg-0">
                     <nav class="nav nav-masthead">
                         <div class="col-md-2"  style="width: 60px">
-                            <a class="nav-link" href="home.html">Home</a>
+                            <a class="nav-link active" href="home.php">Home</a>
                         </div>
 
                         <div class="col-md-2" style="width: 150px">
-                        <a class="nav-link active" href="webboard.html">WebBoards</a>
+                            <a class="nav-link" href="../webboard/webboard.php">WebBoards</a>
                         </div>
 
                         <div class="col-md-2">
-                        <a class="nav-link" href="poll.html">Polls</a>
+                            <a class="nav-link" href="../poll/poll.php">Polls</a>
                         </div>
 
                         <div class="col-md-2">
-                            <a class="nav-link" href="activity.html">Activitys</a>
+                            <a class="nav-link" href="../activity/activity.php">Activitys</a>
                         </div>
 
                         <div class="col-md-2" style="width: 200px">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
+                            <a class="nav-link" href="../contact/contact.php">Contact Us</a>
                         </div>
                         <div class="col-md-2">
-                            <a href="login.html" class="btn btn-secondary">Login?</a>
+                            <a href="../login/login.php" class="btn btn-secondary">Login?</a>
                         </div>
                     </nav>
 
                 </div>
             </div>
         </nav>
-
-        <div class="cover-container">
-            <div class="row containnerbody">
-
-
-            <div class="container panel panel-info">
-            <main role="main" class="container-fluid">
-                <div class="panel panel-info">
-                    <div class="col-md-4">
-                        <div class="card" style="width:400px">
-                            <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
-                            <div class="card-body">
-                                <h4 class="card-title">John Doe</h4>
-                                <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                                <a href="#" class="btn btn-primary">See Profile</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
-            </div>
-
-
-
-            <footer class="footer">
-                <div class="container">
-                    <span class="text-muted"><p>Created by <b style="color: white">ecup developer</b>.</p></span>
-                </div>
-            </footer>
-        </div>
-
-    </div>
-
-</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

@@ -18,45 +18,7 @@
 <body>
 <div class="site-wrapper">
     <div class="site-wrapper-inner">
-        <nav class="row col-md-12 navbar navbar-expand-md navbar-dark fixed-top">
-            <a class="navbar-brand" href="#">ECUP</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                </ul>
-
-                <div class="my-0 my-lg-0">
-                    <nav class="nav nav-masthead">
-                        <div class="col-md-2"  style="width: 60px">
-                            <a class="nav-link active" href="home.html">Home</a>
-                        </div>
-
-                        <div class="col-md-2" style="width: 150px">
-                        <a class="nav-link" href="webboard.html">WebBoards</a>
-                        </div>
-
-                        <div class="col-md-2">
-                        <a class="nav-link" href="poll.html">Polls</a>
-                        </div>
-
-                        <div class="col-md-2">
-                            <a class="nav-link" href="activity.html">Activitys</a>
-                        </div>
-
-                        <div class="col-md-2" style="width: 200px">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
-                        </div>
-                        <div class="col-md-2">
-                            <a href="login.html" class="btn btn-secondary">Login?</a>
-                        </div>
-                    </nav>
-
-                </div>
-            </div>
-        </nav>
+        <?php include 'header.php' ?>
 
         <div class="cover-container">
             <div class="row containnerbody">
