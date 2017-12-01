@@ -65,27 +65,11 @@
             <div class="container panel panel-info">
             <main role="main" class="container-fluid">
                 <div class="panel panel-info">
+                    <h2>Contact Us</h2><br>
 
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <ul class="nav nav-pills card-header-pills">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#">Active</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link disabled" href="#">Disabled</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-block">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
+                    <h4>เลขที่ 21/5 ซอย 9(ถนนศิริมังคลาจารย์) ตำบล สุเทพ อำเภอเมือง จังหวัด เชียงใหม่ 50200</h4>
+
+                    <div id="map" style="width:400px;height:400px;background:yellow"></div>
 
                 </div>
             </main>
@@ -104,12 +88,23 @@
     </div>
 
 </div>
-
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<script>
+    function myMap() {
+        var mapOptions = {
+            center:new google.maps.LatLng(18.7942832, 98.969709),
+            zoom:10
+
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+</script>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArZaptkF-PvukPIiiLvmJykxgE6qRG5LI&callback=myMap"></script>
 <script src="js/vendor/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>

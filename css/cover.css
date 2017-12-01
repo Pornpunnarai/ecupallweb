@@ -120,7 +120,12 @@ body {
   font-weight: 700;
 }
 
-
+div.card-body{
+  background-color: cadetblue;
+}
+h4.card-title{
+  color: black;
+}
 /*
  * Footer
  */
