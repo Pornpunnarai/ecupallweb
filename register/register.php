@@ -1,133 +1,173 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>E-cup Website</title>
+<?php
+require_once './config.php';
+session_start();
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+//
+//$FirstName = $_POST['txtFirstname'];
+//$LastName = $_POST['txtLastname'];
+//$Telephone = $_POST['txtTel'];
+//$Email = $_POST['txtEmail'];
+//$Password = $_POST['txtPassword'];
+//$RePassword = $_POST['txtRepassword'];
+//$Picture = trim($_POST['pic']);
 
-    <!-- Custom styles for this template -->
-    <link href="css/cover.css" rel="stylesheet">
-
-</head>
-
-<body>
-<div class="site-wrapper">
-    <div class="site-wrapper-inner">
-
-        <?php include '../header.php' ?>
-
-        <div class="cover-container">
-            <div class="row containnerbody">
-
-
-            <div class="container panel panel-info">
-            <main role="main" class="container-fluid">
-                <div class="panel panel-info">
-                    <h2>Please Sign Up</h2><br>
-                    <form class="form-horizontal" method="post" action="check_login.php">
-
-                        <div class="row col-md-12" style="justify-content: center">
-                            <div class="col-md-12">
-                                <img id="blah" src="../pic/avatar.png" style="width: 150px" alt="your image" />
-                            </div>
-                            <div class="row"></div>
-                            <div class="col-md-12">
-                                <input type="file" class="btn btn-info btn-sm" name="pic" onchange="readURL(this)">
-                            </div>
-                        </div>
-
-                        <br>
-
-                        <div class="row col-md-12">
-                            <div class="col-md-2">
-                                <label for="inputFirstname" class="control-label">Firstname</label>
-                            </div>
-                            <div class="col-md-10">
-                                <input name="txtFirstname" type="text" placeholder="Enter your email" class="form-control" required autofocus>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row col-md-12">
-                            <div class="col-md-2">
-                                <label for="inputLastname" class="control-label">Lastname</label>
-                            </div>
-                            <div class="col-md-10">
-                                <input name="txtLastname" type="text" placeholder="Enter your email" class="form-control" required autofocus>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row col-md-12">
-                            <div class="col-md-2">
-                                <label for="inputTelephone" class="control-label">Telephone</label>
-                            </div>
-                            <div class="col-md-10">
-                                <input name="txtTel" type="text" placeholder="Enter your email" class="form-control" required autofocus>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row col-md-12">
-                            <div class="col-md-2">
-                                <label for="inputEmail" class="control-label">Email</label>
-                            </div>
-                            <div class="col-md-10">
-                                <input name="txtEmail" type="email" placeholder="Enter your email" class="form-control" required autofocus>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row col-md-12">
-                            <div class="col-md-2">
-                                <label for="inputPassword" class="control-label">Password</label>
-                            </div>
-                            <div class="col-md-10">
-                                <input name="txtPassword" type="password" placeholder="Enter your email" class="form-control" required autofocus>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row col-md-12">
-                            <div class="col-md-2">
-                                <label for="inputRepassword" class="control-label">Repassword</label>
-                            </div>
-                            <div class="col-md-10">
-                                <input name="txtRepassword" type="password" placeholder="Enter your email" class="form-control" required autofocus>
-                            </div>
-                        </div>
-                        <br>
-                        <button name="submit" class="btn btn-info btn-sm pull-right">Sign Up</button>
-                    </form>
-                </div>
-            </main>
-        </div>
-            </div>
+//echo $FirstName;
+//echo "  ";
+//echo $LastName;
+//echo "  ";
+//echo $Telephone;
+//echo "  ";
+//echo $Email;
+//echo "  ";
+//echo $Password;
+//echo "  ";
+//echo $RePassword;
+//echo "  ";
+//echo $Picture;
 
 
-            <!--<footer class="mastfoot">-->
-                <!--<div class="inner">-->
-                    <!--<p>Created by <b style="color: white">ecup developer</b>.</p>-->
-                <!--</div>-->
-            <!--</footer>-->
-            <footer class="footer">
-                <div class="container">
-                    <span class="text-muted"><p>Created by <b style="color: white">ecup developer</b>.</p></span>
-                </div>
-            </footer>
-        </div>
 
-    </div>
+if (isset($_POST["txtFirstname"])) {
+    require_once "phpmailer/class.phpmailer.php";
+//    $name = trim($_POST["uname"]);
+//    $pass = trim($_POST["pass1"]);
+//    $email = trim($_POST["uemail"]);
 
-</div>
+    $FirstName = trim($_POST['txtFirstname']);
+    $LastName = trim($_POST['txtLastname']);
+    $Telephone = trim($_POST['txtTel']);
+    $Email = trim($_POST['txtEmail']);
+    $Password = trim($_POST['txtPassword']);
+    $RePassword = trim($_POST['txtRepassword']);
+    $Picture = trim($_POST['pic']);
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
-<script src="js/vendor/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
-</body>
-</html>
+    $sql = "SELECT COUNT(*) AS count from users where email = :email_id";
+    try {
+        $stmt = $DB->prepare($sql);
+        $stmt->bindValue(":email_id", $Email);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        if ($result[0]["count"] > 0) {
+            $msg = "Email already exist";
+            $msgType = "warning";
+        } else {
+            $sql = "INSERT INTO `users` ( `firstname`, `lastname`, `password`, `email`, `telephone`, `picture`)
+            VALUES " . "( :fname, :lname, :pass, :email, :tel, :pic)";
+            $stmt = $DB->prepare($sql);
+            $stmt->bindValue(":fname", $FirstName);
+            $stmt->bindValue(":lname", $LastName);
+            $stmt->bindValue(":pass", md5($Password));
+            $stmt->bindValue(":email", $Email);
+            $stmt->bindValue(":tel", $Telephone);
+            $stmt->bindValue(":pic", $Picture);
+            $stmt->execute();
+            $result = $stmt->rowCount();
+
+            if ($result > 0) {
+
+                $lastID = $DB->lastInsertId();
+
+                $message = '<html><head>
+                <title>Email Verification</title>
+                </head>
+                <body>';
+                $message .= '<h1>Hi ' . $name . '!</h1>';
+                $message .= '<p><a href="'.SITE_URL.'activate.php?id=' . base64_encode($lastID) . '">CLICK TO ACTIVATE YOUR ACCOUNT</a>';
+                $message .= "</body></html>";
+
+
+                // php mailer code starts
+                $mail = new PHPMailer(true);
+                $mail->IsSMTP(); // telling the class to use SMTP
+
+                $mail->SMTPDebug = 0;                     // enables SMTP debug information (for testing)
+                $mail->SMTPAuth = true;                  // enable SMTP authentication
+                $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
+                $mail->Host = "smtp.gmail.com";      // sets GMAIL as the SMTP server
+                $mail->Port = 465;                   // set the SMTP port for the GMAIL server
+
+                $mail->Username = 'amparuj@gmail.com';
+                $mail->Password = 'rag12005';
+
+                $mail->SetFrom('amparuj@gmail.com', 'amparuj');
+                $mail->AddAddress($Email);
+
+                $mail->Subject = trim("Email Verifcation - www.thesoftwareguy.in");
+                $mail->MsgHTML($message);
+
+                try {
+                    $mail->send();
+                    $msg = "An email has been sent for verfication.";
+                    $msgType = "success";
+                } catch (Exception $ex) {
+                    $msg = $ex->getMessage();
+                    $msgType = "warning";
+                }
+            } else {
+                $msg = "Failed to create User";
+                $msgType = "warning";
+            }
+        }
+    } catch (Exception $ex) {
+        echo $ex->getMessage();
+    }
+}
+
+ ?>
+
+
+<script type="text/javascript">
+  function validateForm() {
+
+    var your_name = $.trim($("#uname").val());
+    var your_email = $.trim($("#uemail").val());
+    var pass1 = $.trim($("#pass1").val());
+    var pass2 = $.trim($("#pass2").val());
+
+
+    // validate name
+    if (your_name == "") {
+      alert("Enter your name.");
+      $("#uname").focus();
+      return false;
+    } else if (your_name.length < 3) {
+      alert("Name must be atleast 3 character.");
+      $("#uname").focus();
+      return false;
+    }
+
+    // validate email
+    if (!isValidEmail(your_email)) {
+      alert("Enter valid email.");
+      $("#uemail").focus();
+      return false;
+    }
+
+    // validate subject
+    if (pass1 == "") {
+      alert("Enter password");
+      $("#pass1").focus();
+      return false;
+    } else if (pass1.length < 6) {
+      alert("Password must be atleast 6 character.");
+      $("#pass1").focus();
+      return false;
+    }
+
+    if (pass1 != pass2) {
+      alert("Password does not matched.");
+      $("#pass2").focus();
+      return false;
+    }
+
+    return true;
+  }
+
+  function isValidEmail(email) {
+    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+  }
+
+
+</script>
