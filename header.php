@@ -29,26 +29,26 @@
                 <div class="my-0 my-lg-0">
                     <nav class="nav nav-masthead">
                         <div class="col-md-2"  style="width: 60px">
-                            <a class="nav-link active" href="home.php">Home</a>
+                            <a class="nav-link active" href="/ecupweb/home.php">Home</a>
                         </div>
 
                         <div class="col-md-2" style="width: 150px">
-                            <a class="nav-link" href="../webboard/webboard.php">WebBoards</a>
+                            <a class="nav-link" href="/ecupweb/webboard/webboard.php">WebBoards</a>
                         </div>
 
                         <div class="col-md-2">
-                            <a class="nav-link" href="../poll/poll.php">Polls</a>
+                            <a class="nav-link" href="/ecupweb/poll/poll.php">Polls</a>
                         </div>
 
                         <div class="col-md-2">
-                            <a class="nav-link" href="../activity/activity.php">Activitys</a>
+                            <a class="nav-link" href="/ecupweb/activity/activity.php">Activitys</a>
                         </div>
 
                         <div class="col-md-2" style="width: 200px">
-                            <a class="nav-link" href="../contact/contact.php">Contact Us</a>
+                            <a class="nav-link" href="/ecupweb/contact/contact.php">Contact Us</a>
                         </div>
                         <div class="col-md-2">
-                            <a href="../login/login.php" class="btn btn-secondary">Login?</a>
+                            <a href="/ecupweb/login/login.php" class="btn btn-secondary">Login?</a>
                         </div>
                     </nav>
 
